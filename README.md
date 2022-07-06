@@ -58,3 +58,58 @@ To solve this challenge, we need to implement the methods of `EmployeeUtils` so 
 
 ### 5. Solution: Using Lambdas
 The code in class `com.challenge.EmployeeUtils` contains the solution which pass the tests defined in `com.challenge.EmployeeUtilsTest`.
+
+## Unit 3: Streams
+### 1. Understanding Streams
+* The [Streams API](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html) was introduced in Java 8.
+* Streams used together with lambdas. Streams allows you to write concise, powerful code.
+* Example:
+    > You have a list of countries (ArrayList).
+    > You want to:
+    > * Capatalize everything.
+    > * Filter out countries beginning with "C".
+    > * Sort Countries in alphabetical order.
+    > * Print results to the console.  
+    
+    To implement the above requirements without Streams, you will use `for` loop:
+    ```
+    //Sort Countries in alphabetical order.
+    Collections.sort(countries);
+    
+    for (String country : countries) {
+        // Capatalize everything
+        country = country.toUpperCase();
+        
+        // Filter out countries beginning with "C".
+        if(!country.startWith("C")) {
+            // Print results to the console
+            System.out.println(country);
+        }
+    }
+    ```
+
+    Now let's see what this would like with Streams.
+    ```
+    countries.stream()
+        .map(s -> s..toUpperCase())
+        .filter(s -> !.startWith("C"))
+        .sorted()
+        .forEach(s -> System.out.println(s));
+    ```
+* With Streams APIs, you can chain methods together to keep processing the list in different ways. So each line here handles each of the requirements:
+    * The `map` method is used to capatalize the strings.
+    * The `filter` method is used to filter out countries beginning with a "C".
+    * The `sorted` method puts the results in alphabetical order.
+    * And finally, the `forEach` method prints out each one to the console.
+    
+* **It is importtant to note that this code won't actually change the list of countries at all. This is because streams are mutable so you can't go making changes to the elemens in the middle of the stream.**
+
+* In some of these methods, you will see that lambda notation is used. So this is an example of a function passed to a method as an argument, which is something that's quite often done in functional programming.
+
+* It is also worth noting that the `forEach` method has to go at the end here. This is because there are two types of methods in the Streams API:
+    1. Intermedia (e.g. `map`, `filter` and `sorted`). Intermedita operations all return a stream as a result, so you can keep chaining them together for as long as you like.
+    2. Terminal (e.g. `forEach`). Terminal operations return something else, so either void or some other type, so they have to go at the end of the chain.
+#### Summary
+* Streams operations can be **intermediate** or **terminal**.
+* Terminal operations have to come last.
+* Streams are immutable.
