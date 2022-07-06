@@ -10,7 +10,7 @@ public class EmployeeUtils {
      * @return Employee's Full Name
      */
     public String getFullName(Employee employee) {
-        Function<Employee, String> fullName = (Employee e) -> e.getFirstName() + " " + e.getLastName();
+        Function<Employee, String> fullName = e -> e.getFirstName() + " " + e.getLastName();
         
         return fullName.apply(employee);
     }
@@ -20,7 +20,7 @@ public class EmployeeUtils {
      * @return Gets the last name of the Employee's manager
      */
     public String getManagersLastName(Employee employee) {
-        Function<Employee, String> managersLastName = (Employee e) -> e.getManager().getLastName() ;
+        Function<Employee, String> managersLastName = e -> e.getManager().getLastName() ;
         return managersLastName.apply(employee);
     }
 
@@ -29,7 +29,7 @@ public class EmployeeUtils {
      * @return True if the Employee has been employed more than 5 years
      */
     public boolean hasBeenEmployedLongerThanFiveYears(Employee employee) {
-        Predicate<Employee> employedLongerThanFiveYears = (Employee e) -> e.getYearsOfService() > 5;
+        Predicate<Employee> employedLongerThanFiveYears = e -> e.getYearsOfService() > 5;
         return employedLongerThanFiveYears.test(employee);
     }
 
@@ -38,7 +38,7 @@ public class EmployeeUtils {
      * @return True if the Employee has more than 3 managers
      */
     public boolean hasMoreThanThreeDirectReports(Employee employee) {
-        Predicate<Employee> moreThanThreeDirectReports = (Employee e) -> e.getNumberOfDirectReports() > 3;
+        Predicate<Employee> moreThanThreeDirectReports = e -> e.getNumberOfDirectReports() > 3;
         return moreThanThreeDirectReports.test(employee);
     }
 
@@ -47,9 +47,9 @@ public class EmployeeUtils {
      * @return True if the Employee has more than 3 years of service and less than 2 direct managers
      */
     public boolean hasMoreThanThreeYearsOfServiceAndLessThanTwoDirectReports(Employee employee) {
-        Predicate<Employee> moreThanThreeYearsOfServiceAndLessThanTwoDirectReports = (Employee e) -> {
-            return (e.getYearsOfService() > 3) && (e.getNumberOfDirectReports() < 2) ;
-        };
+        Predicate<Employee> moreThanThreeYearsOfServiceAndLessThanTwoDirectReports = e -> 
+            (e.getYearsOfService() > 3) && (e.getNumberOfDirectReports() < 2) ;
+        
         return moreThanThreeYearsOfServiceAndLessThanTwoDirectReports.test(employee);
     }
 }
