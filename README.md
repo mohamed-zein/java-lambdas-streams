@@ -1,6 +1,8 @@
 # Java: Lambdas and Streams
 This is the repository for the LinkedIn Learning course [Java: Lambdas and Streams](https://www.linkedin.com/learning/java-lambdas-and-streams). 
 
+The [GitHub repo](https://github.com/LinkedInLearning/java-lambdas-streams-2453107) provided by the instructor.
+
 ## Introduction
 Java is famous for being Object-Oriented language.
 
@@ -32,5 +34,10 @@ public interface Greeting {
 
 ```
 We can implement this interface in 2 ways:
-1. Typical class.
+1. Concrete class.
 2. Anonymous class.
+
+### 2. Using Lambdas
+In the previous lesson, we did implement the `@FunctionalInterface` interface using the typical approach (i.e. _Concrete Class_ and _Anonymous class_).
+In this lesson we use the new _lambda_ notation.
+> `([comma separated argument-list]) -> {code block} ;`
