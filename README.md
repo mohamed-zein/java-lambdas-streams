@@ -55,3 +55,6 @@ In this section we have a skeleton for using Lambdas for solving the challenge.
 * `EmployeeUtilsTest` is a test class for `EmployeeUtils`
 
 To solve this challenge, we need to implement the methods of `EmployeeUtils` so all tests in `EmployeeUtilsTest` pass successfully.
+
+### 5. Solution: Using Lambdas
+The code in class `com.challenge.EmployeeUtils` contains the solution which pass the tests defined in `com.challenge.EmployeeUtilsTest`.

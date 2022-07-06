@@ -32,8 +32,8 @@ public class EmployeeUtilsTest {
 
     @Test
     public void testHasBeenEmployedLongerThanFiveYears() {
-        Employee employee = new Employee();
-        employee.setYearsOfService(20); 
+        Employee employee = new Employee()
+        employee.setYearsOfService(20);
 
         Boolean actual = employeeUtils.hasBeenEmployedLongerThanFiveYears(employee);
 
