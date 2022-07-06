@@ -41,3 +41,11 @@ We can implement this interface in 2 ways:
 In the previous lesson, we did implement the `@FunctionalInterface` interface using the typical approach (i.e. _Concrete Class_ and _Anonymous class_).
 In this lesson we use the new _lambda_ notation.
 > `([comma separated argument-list]) -> {code block} ;`
+
+### 3. Using existing interfaces
+Actually, we didn't need to create our `@FunctionalInterface` interface.  
+Java's already got quite a few implementations of ready-made functional interfaces that we can use.  
+There's a package called `java.util.function`, which contains lots of useful functional interfaces.  
+[This package](https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html) contains a list of interfaces that covers most of use cases for writing lambdas.  
+ A commonly used one is this one called [Function](https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html), which represents a function that accepts one argument and produces a result.  
+ In the code example, we will use the [Interface `IntBinaryOperator`](https://docs.oracle.com/javase/8/docs/api/java/util/function/IntBinaryOperator.html) instead of our custom `Calculator` interface.
