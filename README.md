@@ -115,6 +115,10 @@ The code in class `com.challenge.EmployeeUtils` contains the solution which pass
 * Streams are immutable.
 
 ### 2. Using Streams
-There are 2 ways to create [Streams](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html).
-1. The most common use of streams is to create a stream from an existing [Array](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html) or [Collections](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html).
-2. Create Stream without Collections or Array at all by creating a Stream object and passing the elements of the stream.
+* There are 2 ways to create [Streams](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html).
+    1. The most common use of streams is to create a stream from an existing [Array](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html) or [Collections](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html).
+    2. Create Stream without Collections or Array at all by creating a Stream object and passing the elements of the stream.
+
+* In this lesson, we used 2 Streams methods:
+    1. `sorted`: This is an **intermediate** method that sort the items of the Stream.
+    2. `forEach`: This is a **terminal** method. We used it to output the items of the Stream after being `sorted`.
