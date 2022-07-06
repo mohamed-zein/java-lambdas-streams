@@ -1,4 +1,4 @@
-package com.example;
+package com.lambdas.example;
 
 import static org.junit.Assert.assertTrue;
 

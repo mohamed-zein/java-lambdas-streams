@@ -1,4 +1,4 @@
-package com.challenge;
+package com.lambdas.challenge;
 
 public class Employee {
     private String firstName;
