@@ -33,9 +33,9 @@ public class EmployeeUtilsTest {
     @Test
     public void testHasBeenEmployedLongerThanFiveYears() {
         Employee employee = new Employee();
-        employee.setNumberOfDirectReports(5);
+        employee.setYearsOfService(20); 
 
-        Boolean actual = employeeUtils.hasMoreThanThreeDirectReports(employee);
+        Boolean actual = employeeUtils.hasBeenEmployedLongerThanFiveYears(employee);
 
         assertTrue(actual);
     }
