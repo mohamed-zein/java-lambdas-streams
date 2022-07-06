@@ -61,7 +61,7 @@ The code in class `com.challenge.EmployeeUtils` contains the solution which pass
 
 ## Unit 3: Streams
 ### 1. Understanding Streams
-* The [Streams API](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html) was introduced in Java 8.
+* The [Streams API](https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html) was introduced in Java 8.
 * Streams used together with lambdas. Streams allows you to write concise, powerful code.
 * Example:
     > You have a list of countries (ArrayList).
@@ -113,3 +113,8 @@ The code in class `com.challenge.EmployeeUtils` contains the solution which pass
 * Streams operations can be **intermediate** or **terminal**.
 * Terminal operations have to come last.
 * Streams are immutable.
+
+### 2. Using Streams
+There are 2 ways to create [Streams](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html).
+1. The most common use of streams is to create a stream from an existing [Array](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html) or [Collections](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html).
+2. Create Stream without Collections or Array at all by creating a Stream object and passing the elements of the stream.
