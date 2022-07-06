@@ -24,9 +24,15 @@ public class Main {
         Stream<String> shoppingListStream = shoppingList.stream();
 
         // Sort the items in the Stream object shoppingListStream using the built-in method sorted
+        // We will use map method to make all items in Capital letters. map takes a Function as an argument so we will use lambda notation to do that
+        // We will use the filter method to get only items start with P. filter method takes Predicate as an argument which takes single argument and returns boolean
         // To output results to the screen, we use the forEach method
         // The forEach method takes a Consumer as an argument. Consumer is a @FunctionalInterface so it can be used with lambda notation.
-        shoppingListStream.sorted().forEach(item -> System.out.println(item));
+        // forEach is a terminal method so no other method can be chained after the forEach method
+        shoppingListStream.sorted()
+            .map(item -> item.toUpperCase())
+            .filter(item -> item.startsWith("P"))
+            .forEach(item -> System.out.println(item));
 
         // Create a Stream without an Array or Collection
         Stream<String> lettersStream = Stream.of("a", "b", "c");

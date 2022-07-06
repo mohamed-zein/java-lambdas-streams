@@ -122,3 +122,12 @@ The code in class `com.challenge.EmployeeUtils` contains the solution which pass
 * In this lesson, we used 2 Streams methods:
     1. `sorted`: This is an **intermediate** method that sort the items of the Stream.
     2. `forEach`: This is a **terminal** method. We used it to output the items of the Stream after being `sorted`.
+
+### 3. More Streams operations
+* In this lessons, we will use 2 interesting methods of the Streams APIs:
+    1. `map`: This method takes a [Function](https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html) as an argument. _Function_ takes one argument and returns one thing.
+        * It is important to remember that the purpose of `map` that the purpose of this method is to create a new object rather than modify existing one.
+        * If you have a Stream object and you are trying to change a field on an object with a `set` method, for example, you would not be able to do that. You have to create a whole new object and set the value on the new object.
+    2. `filter`: This method takes [Predicate](https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html) as an argument. _Predicate_ is a functional interface that takes a single argument and returns a `boolean`
+
+* Both those 2 methods are **intermediate** methods so they must be called only before a **terminal** method (i.e. `forEach`)
