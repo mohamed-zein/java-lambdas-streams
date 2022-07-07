@@ -131,3 +131,15 @@ The code in class `com.challenge.EmployeeUtils` contains the solution which pass
     2. `filter`: This method takes [Predicate](https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html) as an argument. _Predicate_ is a functional interface that takes a single argument and returns a `boolean`
 
 * Both those 2 methods are **intermediate** methods so they must be called only before a **terminal** method (i.e. `forEach`)
+
+### 4. Advanced streams operations
+In this lesson, we will have a look on how Streams works.
+* Streams can only be used once.
+* Streams are not designed for storing objects. Instead, they are designed for performing operations in group of objects.
+* When a Stream is created from an existing Array or Collections object, operations on the stream **DOES NOT** affect/change the original Array or Collection because Stream operations are performed on the Stream not on the original List.
+* In most cases, we don't need to create a variable for the Stream Object because often we don't use it anymore after performing operations on it.
+* If we need to keep the results of my Stream somewhere so I can refer to them or use them later on, in this case I need to create a new Collection and save the results to that new Collection using the `collect` method.
+    * `collect` is a _terminal_ operation so it must be called at the end of the chain and cannot be called after another _terminal_ operation like `forEach`.
+
+#### Summary
+Streams are for performing operations on a group of elements in functional style and not for storing things.
