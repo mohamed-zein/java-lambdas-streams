@@ -57,7 +57,7 @@ In this section we have a skeleton for using Lambdas for solving the challenge.
 To solve this challenge, we need to implement the methods of `EmployeeUtils` so all tests in `EmployeeUtilsTest` pass successfully.
 
 ### 5. Solution: Using Lambdas
-The code in class `com.challenge.EmployeeUtils` contains the solution which pass the tests defined in `com.challenge.EmployeeUtilsTest`.
+The code in class `com.lambdas.challenge.EmployeeUtils` contains the solution which pass the tests defined in `com.lambdas.challenge.EmployeeUtilsTest`.
 
 ## Unit 3: Streams
 ### 1. Understanding Streams
@@ -148,3 +148,6 @@ Streams are for performing operations on a group of elements in functional style
 Challenge Instruction:
 * Update the code in the `PlanetUtils` class.
 * Get all the tests in `PlanetUtilsTest` passing.
+
+### 6. Solution: Using streams
+The code in class `com.streams.challenge.PlanetUtils` contains the solution which pass the tests defined in `com.streams.challenge.PlanetUtilsTest`.
