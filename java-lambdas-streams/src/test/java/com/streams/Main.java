@@ -3,11 +3,16 @@ package com.streams;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
         
+        // Create a Stream without an Array or Collection
+        Stream<String> lettersStream = Stream.of("a", "b", "c");
+
         Integer[] scores = new Integer[] {80, 66, 73, 92, 43};
 
         // Create a Stream from an existing Array
@@ -34,7 +39,22 @@ public class Main {
             .filter(item -> item.startsWith("P"))
             .forEach(item -> System.out.println(item));
 
-        // Create a Stream without an Array or Collection
-        Stream<String> lettersStream = Stream.of("a", "b", "c");
+        // Streams Advanced operations
+        // This illegal line of code. It throws exception: java.lang.IllegalStateException: stream has already been operated upon or closed
+        // because shoppingListStream can be only used once (done in previous step when forEach is called)
+        // shoppingListStream.forEach(item -> System.out.println(item));
+        
+        // The original List is not affected by the operations performed on the Stream
+        System.out.println(shoppingList);
+
+        // We didn't need to create a variable shoppingListStream because it is not actually used.
+        // If we need to keep the results of my Stream so I can use them later, in this case I need to create a new collection using the collect method
+        List<String> sortedShopingList = shoppingList.stream()
+            .sorted()
+            .map(item -> item.toUpperCase())
+            .filter(item -> item.startsWith("P"))
+            .collect(Collectors.toList());
+        
+        System.out.println(sortedShopingList);
     }
 }
