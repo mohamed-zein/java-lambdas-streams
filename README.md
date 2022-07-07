@@ -143,3 +143,8 @@ In this lesson, we will have a look on how Streams works.
 
 #### Summary
 Streams are for performing operations on a group of elements in functional style and not for storing things.
+
+### 5. Challenge: Using streams
+Challenge Instruction:
+* Update the code in the `PlanetUtils` class.
+* Get all the tests in `PlanetUtilsTest` passing.
