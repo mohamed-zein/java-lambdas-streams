@@ -57,7 +57,7 @@ In this section we have a skeleton for using Lambdas for solving the challenge.
 To solve this challenge, we need to implement the methods of `EmployeeUtils` so all tests in `EmployeeUtilsTest` pass successfully.
 
 ### 5. Solution: Using Lambdas
-The code in class `com.challenge.EmployeeUtils` contains the solution which pass the tests defined in `com.challenge.EmployeeUtilsTest`.
+The code in class `com.lambdas.challenge.EmployeeUtils` contains the solution which pass the tests defined in `com.lambdas.challenge.EmployeeUtilsTest`.
 
 ## Unit 3: Streams
 ### 1. Understanding Streams
