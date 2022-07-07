@@ -148,3 +148,6 @@ Streams are for performing operations on a group of elements in functional style
 Challenge Instruction:
 * Update the code in the `PlanetUtils` class.
 * Get all the tests in `PlanetUtilsTest` passing.
+
+### 6. Solution: Using streams
+The code in class `com.streams.challenge.PlanetUtils` contains the solution which pass the tests defined in `com.streams.challenge.PlanetUtilsTest`.
