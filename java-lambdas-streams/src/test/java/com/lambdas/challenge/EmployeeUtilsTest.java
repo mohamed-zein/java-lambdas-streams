@@ -1,4 +1,4 @@
-package com.challenge;
+package com.lambdas.challenge;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -32,7 +32,7 @@ public class EmployeeUtilsTest {
 
     @Test
     public void testHasBeenEmployedLongerThanFiveYears() {
-        Employee employee = new Employee()
+        Employee employee = new Employee();
         employee.setYearsOfService(20);
 
         Boolean actual = employeeUtils.hasBeenEmployedLongerThanFiveYears(employee);

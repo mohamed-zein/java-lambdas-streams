@@ -1,4 +1,4 @@
-package com.challenge;
+package com.lambdas.challenge;
 
 import java.util.function.Function;
 import java.util.function.Predicate;

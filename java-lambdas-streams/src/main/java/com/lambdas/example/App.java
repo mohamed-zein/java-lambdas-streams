@@ -1,4 +1,4 @@
-package com.example;
+package com.lambdas.example;
 
 import java.util.Random;
 import java.util.function.IntBinaryOperator;

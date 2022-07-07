@@ -1,4 +1,4 @@
-package com.example;
+package com.lambdas.example;
 
 public class HelloWorldGreeting implements Greeting {
 
