@@ -24,7 +24,7 @@ Functional Programming in Java:
 ## Unit 2: Lambdas
 ### 1. Functional Interfaces
 We start with creating an interface `Greeting` that contains one function `sayHello`. Most importantly, the interface is annotated as `@FunctionalInterface`. The annotation marks make it illegal to have more than one function in the interface.
-```
+```java
 package com.example ;
 
 @FunctionalInterface
@@ -72,7 +72,7 @@ The code in class `com.lambdas.challenge.EmployeeUtils` contains the solution wh
     > * Print results to the console.  
     
     To implement the above requirements without Streams, you will use `for` loop:
-    ```
+    ```java
     //Sort Countries in alphabetical order.
     Collections.sort(countries);
     
@@ -89,7 +89,7 @@ The code in class `com.lambdas.challenge.EmployeeUtils` contains the solution wh
     ```
 
     Now let's see what this would like with Streams.
-    ```
+    ```java
     countries.stream()
         .map(s -> s..toUpperCase())
         .filter(s -> !.startWith("C"))
